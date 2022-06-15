@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aw="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.chibde.visualizer.LineBarVisualizer
+        android:id="@+id/visualizerLineBar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="10dp" />
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/waveformSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:wave_background_color="@color/teal_700"
+        app:wave_corner_radius="2dp"
+        app:wave_gap="2dp"
+        app:wave_gravity="center"
+        app:wave_min_height="5dp"
+        app:wave_progress_color="@color/teal_200"
+        app:wave_width="5dp" />
+
+    <LinearLayout
+        android:id="@+id/record_voice_container_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/record_voice_msg_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".80"
+            android:text="Record Voice Message"
+            android:textColor="#FFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cancel_imageview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_cancel"
+        android:translationX="70dp"
+        android:visibility="gone" />
+
+    <org.firezenk.audiowaves.Visualizer
+        android:id="@+id/visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        aw:aw_ball_diameter="30"
+        aw:aw_color_gradient_end="@color/teal_200"
+        aw:aw_color_gradient_start="@color/teal_700"
+        aw:aw_color_is_gradient="true"
+        aw:aw_color_uniform="@color/black"
+        aw:aw_format="vertical_lines"
+        aw:aw_gravity="center"
+        aw:aw_height="200"
+        aw:aw_line_border_radius="50"
+        aw:aw_line_height="30"
+        aw:aw_line_min_height="30"
+        aw:aw_line_min_with="30"
+        aw:aw_line_spacing="10"
+        aw:aw_line_with="30"
+        aw:aw_num_waves="10"
+        aw:aw_width="100" />
+
+    <!--  -->
+
+</LinearLayout>

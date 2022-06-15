@@ -1,0 +1,3 @@
+rootProject.name = "Demo Wave Form"
+include ':app'
+include ':waveform'

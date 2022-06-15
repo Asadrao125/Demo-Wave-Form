@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.newventuresoftware.waveform.WaveformView
+        android:id="@+id/waveformView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#000000"
+        app:mode="RECORDING"
+        app:playbackIndicatorColor="@color/teal_700"
+        app:waveformColor="@color/teal_200"
+        app:waveformFillColor="@android:color/holo_red_dark"
+        app:waveformStrokeThickness="5" />
+
+    <com.newventuresoftware.waveform.WaveformView
+        android:id="@+id/playbackWaveformView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:background="#000000"
+        android:visibility="gone"
+        app:mode="PLAYBACK"
+        app:waveformColor="#e5dc33"
+        app:waveformFillColor="#e93519"
+        app:waveformStrokeThickness="3" />
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/waveformSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:wave_background_color="@color/teal_700"
+        app:wave_corner_radius="2dp"
+        app:wave_gap="2dp"
+        app:wave_gravity="center"
+        app:wave_min_height="5dp"
+        app:wave_progress_color="@color/teal_200"
+        app:wave_width="5dp" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgPlay_Pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_audio"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvAudioName"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="Sample 1"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.newventuresoftware.waveform.WaveformView
+            android:id="@+id/waveformView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:mode="RECORDING"
+            app:playbackIndicatorColor="@color/teal_200"
+            app:waveformColor="@color/teal_200"
+            app:waveformFillColor="@android:color/holo_red_dark"
+            app:waveformStrokeThickness="5" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
